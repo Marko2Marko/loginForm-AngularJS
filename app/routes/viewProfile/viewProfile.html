@@ -1,0 +1,20 @@
+<div>
+view profile
+</div>
+
+</div>
+<div>
+<h3>{{email}}</h3>	
+<p>email</p><h3>{{user.email}}</h3>
+<p>password</p><h3>{{user.password}}</h3>
+<p>name</p><h3>{{user.name}}</h3>	
+<p>id</p><h3>{{user.id}}</h3>	
+<p>date</p><h3>{{user.date | date : 'short'}}</h3>
+<p>modifiedUser</p><h3>{{user.modifiedUser | date : 'short'}}</h3>
+
+</div>
+
+<button  data-ui-sref='editUsers'>EDIT USERS</button>
+<button  data-ui-sref='listUsers'>BACK</button> 
+
+<div>{{message}}</div>

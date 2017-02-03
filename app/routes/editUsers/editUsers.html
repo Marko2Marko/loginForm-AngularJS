@@ -1,0 +1,28 @@
+<div>
+edit Users
+</div>
+<form name="registerForm">
+        <div>
+            <label for="name">Your name</label>
+            <input type="text" name="name" id="name" data-ng-model="user.name" required/>
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" data-ng-model="user.email" required/>
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" data-ng-model="user.password" required/>
+        </div>
+
+        <div>
+      <label for="user_role">Select list (select one) user role:</label>
+      <select name=""user_role" id="user_role"  ng-model="user.user_role">
+        <option value="user">user</option>
+        <option value="admin">admin</option>
+      </select>
+	  </div>
+            <button type="submit" data-ng-click="updateUser(user)" data-ng-disabled="registerForm.$invalid">Update</button>
+            <button data-ui-sref="login">Cancel</button>
+        </div>
+    </form>
