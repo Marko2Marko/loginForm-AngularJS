@@ -19,6 +19,7 @@ edit profil
             <label for="user_role">User role</label>
             <input type="text" name="user_role" id="user_role" ng-model="user.user_role" ng-init="user.user_role = 'user'" />
         </div>
+     <div>
             <button type="submit" data-ng-click="updateUser(user)" data-ng-disabled="registerForm.$invalid">Update</button>
             <button data-ui-sref="login">Cancel</button>
         </div>

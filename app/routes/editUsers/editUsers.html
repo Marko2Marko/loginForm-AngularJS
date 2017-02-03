@@ -17,11 +17,12 @@ edit Users
 
         <div>
       <label for="user_role">Select list (select one) user role:</label>
-      <select name=""user_role" id="user_role"  ng-model="user.user_role">
+      <select name="user_role" id="user_role"  ng-model="user.user_role">
         <option value="user">user</option>
         <option value="admin">admin</option>
       </select>
 	  </div>
+    <div>
             <button type="submit" data-ng-click="updateUser(user)" data-ng-disabled="registerForm.$invalid">Update</button>
             <button data-ui-sref="login">Cancel</button>
         </div>

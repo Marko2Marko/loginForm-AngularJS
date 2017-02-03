@@ -48,6 +48,6 @@ app.controller('registerController', ['$rootScope', '$scope', '$state', function
          }
          
         }
-    }
+    };
 
 }]);

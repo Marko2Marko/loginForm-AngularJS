@@ -26,7 +26,7 @@ app.controller('listUsersController', [ '$rootScope', '$scope' ,'$state', functi
     	console.log($scope.user);
     	console.log($rootScope.usr);
       $state.go('viewProfile');
-    }
+    };
 
 
 	 
