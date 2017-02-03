@@ -1,68 +1,45 @@
 <div>
 
-list users
-</div>
-<h2>localStorage.users</h2>
-<div>
- <table>
-	<th>id</th>
-   	<th>email</th>
-   	<th>password</th>
-   	<th>name</th>
-   	<th>date</th>
-   	<th>modified user</th>
-   	<th>user role</th>
-   </tr>
-	
-		<tr data-ng-repeat="user in userss" data-ng-click="viewProfile(user)">
-		       <td>{{user.id}}</td>
-               <td>{{user.email}} </td>
-               <td>{{user.password}}</td>
-               <td>{{user.name}}</td>      
-               <td>{{user.date | date : 'short'}}</td>  
-               <td>{{user.modifiedUser | date : 'short'}}</td>  
-               <td>{{user.user_role}}</td> 
-		 </tr>
-	
- </table>	
-</div>
-
-<h2>admin user</h2>
-
-<div>
-	id : <strong>{{user.id}}</strong><br /> 
-	email : <strong>{{user.email}}</strong><br /> 
-	password : <strong>{{user.password}}</strong><br />
-	name : <strong>{{user.name}}</strong><br />
-	user_role : <strong>{{user.user_role}}</strong><br />
-	<p>date</p><h3>{{user.date | date : 'short'}}</h3><br />
-    <p>modifiedUser</p><h3>{{user.modifiedUser | date : 'short'}}</h3>
+    list users
 </div>
 <hr />
-<h2>$rootScope.users</h2>
+<!--<h2>localStorage.users</h2>-->
 <div>
- <table>
-   <tr>
-    <th>id</th>
-   	<th>email</th>
-   	<th>password</th>
-   	<th>name</th>
-   	<th>date</th>
-   	<th>modified user</th>
-   	<th>user role</th>
-   </tr>
-	
-		<tr data-ng-repeat="user in users" data-ng-click="viewProfile(user)">
-		       <td>{{user.id}}</td>
-               <td>{{user.email}} </td>
-               <td>{{user.password}}</td>
-               <td>{{user.name}}</td>      
-               <td>{{user.date | date : 'short'}}</td>  
-               <td>{{user.modifiedUser | date : 'short'}}</td>  
-               <td>{{user.user_role}}</td> 
-		 </tr>
-	
- </table>
+    <table>
+        <th>id</th>
+        <th>email</th>
+        <th>password</th>
+        <th>name</th>
+        <th>date</th>
+        <th>modified user</th>
+        <th>user role</th>
+        </tr>
+
+        <tr data-ng-repeat="user in userss" data-ng-click="viewProfile(user)">
+            <td>{{user.id}}</td>
+            <td>{{user.email}} </td>
+            <td>{{user.password}}</td>
+            <td>{{user.name}}</td>      
+            <td>{{user.date| date : 'short'}}</td>  
+            <td>{{user.modifiedUser| date : 'short'}}</td>  
+            <td>{{user.user_role}}</td> 
+        </tr>
+
+    </table>	
 </div>
+
+<!--<h2>admin user</h2>
+
+<div>
+    id : <strong>{{user.id}}</strong><br /> 
+    email : <strong>{{user.email}}</strong><br /> 
+    password : <strong>{{user.password}}</strong><br />
+    name : <strong>{{user.name}}</strong><br />
+    user_role : <strong>{{user.user_role}}</strong><br />
+    <p>date</p><h3>{{user.date| date : 'short'}}</h3><br />
+    <p>modifiedUser</p><h3>{{user.modifiedUser| date : 'short'}}</h3>
+</div>-->
+
+
 <button  data-ui-sref='login'>logout</button> 
 <button  data-ui-sref='admin'>back</button> 

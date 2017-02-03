@@ -1,45 +1,30 @@
-app.controller('editUsersController',[ '$scope', '$rootScope','$state', function($scope, $rootScope, $state){
-	console.log('editUsers kontroler je aktivan');
+app.controller('editUsersController', ['$scope', '$rootScope', '$state', function ($scope, $rootScope, $state) {
+        console.log('editUsers kontroler je aktivan');
 
-    $rootScope.message = "";
+        $rootScope.message = "";
 
-	$rootScope.usr;
-	console.log($rootScope.usr);
-	//$scope.user = $rootScope.usr;
-	var users = $rootScope.getUsers();
+        $rootScope.usr;
+        console.log($rootScope.usr);
 
-	$scope.updateUser = function (user){
-    
+        $scope.user = $rootScope.usr;
+        var users = $rootScope.getUsers();
 
-   for ( var i in $rootScope.users){
-     if ($rootScope.users[i].id == $rootScope.usr.id){
+        $scope.updateUser = function (user) {
 
-        $scope.user.id = $rootScope.users[i].id; //ovo koristim sad da bih dodao postojeci id,jer se gubi id bez ovog koda
-     	$rootScope.users[i] = $scope.user;
-     	$scope.user.date = $rootScope.usr.date;//ovo koristim sad da bih dodao postojeci date registracije
-     	$scope.user.modifiedUser = new Date();//vo koristim sad da bih dodao novi dat
-        
-  
-        $rootScope.message = "uspesno azuriran korisnik.";
+            for (var i in users) {
+                if (users[i].id == $rootScope.usr.id) {
+                    $scope.user.id = users[i].id;
+                    users[i] = $scope.user;
+                    $scope.user.date = $rootScope.usr.date;
+                    $scope.user.modifiedUser = new Date();
 
-       
-     	break;
+                    $rootScope.setUsers(users);
+                }
+            }
+            $rootScope.message = "uspesno azuriran korisnik.";
+            $rootScope.usr = $scope.user;
 
-     }
-       }
-       for (var i in users) {
-           if (users[i].id == $rootScope.usr.id ){
-         //    $scope.user.id = $rootScope.users[i].id; 
-            users[i] = $scope.user;
-             $scope.user.date = $rootScope.usr.date;
-             $scope.user.modifiedUser = new Date();
+            $state.go('viewProfile');
 
-            $rootScope.setUsers(users);
-    }
-        }
-       $rootScope.usr = $scope.user;
-        
-        $state.go('viewProfile');
-       
-	};
-}]);
+        };
+    }]);

@@ -90,14 +90,11 @@ var app = angular.module('myApp', ['ui.router'])
         }
     });
 }])
-//ovo je root kontroler i $scope i $rootScope mu dodju isto, ali je bitno jedino zbog sintakse sta pise... fakticki su ista stvar, jer je to jedan isti prostor, prostor glavnog kontrolera.
 .controller('rootController', ['$rootScope', '$scope', '$state' , function($rootScope, $scope, $state){
     console.log('root kontroler je aktivan');
-
-    $rootScope.users = [{"password":'admin',"email":"admin@admin","name":"Admin","user_role":"admin","id":0}];
   
 
-    $scope.states = ['login', 'admin' ,'register', 'myProfile', 'listUsers', 'editProfile', 'editUsers', 'viewProfile']; //ovde moras dodati sva stanja da bi se prikazala u nasem meniju...
+    $scope.states = ['login', 'admin' ,'register', 'myProfile', 'listUsers', 'editProfile', 'editUsers', 'viewProfile']; 
    
    var administrator = [{"password":'admin',"email":"admin@admin","name":"Admin","user_role":"admin","id":0}];
 
