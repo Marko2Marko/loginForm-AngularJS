@@ -18,7 +18,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+"
+    "url": "git+https://github.com/Marko2Marko/loginForm-AngularJS"
   },
-  "homepage": ""
+  "homepage": "https://github.com/Marko2Marko/loginForm-AngularJS"
 }
