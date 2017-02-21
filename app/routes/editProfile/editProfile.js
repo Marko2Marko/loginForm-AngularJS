@@ -22,6 +22,8 @@ app.controller('editProfileController', ['$rootScope', '$scope', '$state', funct
             }
             $rootScope.usr = $scope.user;
 
+             $rootScope.message = "uspesno azuriran korisnik. Ulogujte se ponovo";
+
             $state.go('login');
 
         };
